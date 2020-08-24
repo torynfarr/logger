@@ -1,0 +1,27 @@
+﻿<ContentDialog
+    x:Class="logger_server.ContentDialogAbout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:logger_server"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="About"
+    PrimaryButtonText="OK"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="58*"/>
+        </Grid.RowDefinitions>
+        <Image Source="ms-appx:///Assets/StoreLogo.png" Width="40" Height="40" Margin="0,0,0,94" HorizontalAlignment="Left"/>
+        <TextBlock TextWrapping="Wrap" Text="Logger Server v1.0" VerticalAlignment="Top" Margin="45,10,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="4,54,0,0" Text="Created by Toryn Farr" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
+        <TextBlock HorizontalAlignment="Left" Margin="4,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"><Hyperlink NavigateUri="https://aporia.io">https://aporia.io</Hyperlink></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="4,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"><Hyperlink NavigateUri="https://github.com/torynfarr/logger">https://github.com/torynfarr/logger</Hyperlink></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="4,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="395" Grid.RowSpan="2">This work is licensed under the <Hyperlink NavigateUri="https://github.com/torynfarr/logger/blob/master/LICENSE">GNU General Public License v3.0</Hyperlink></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="4,29,0,10" TextWrapping="Wrap" Width="266" Grid.Row="1"><Hyperlink NavigateUri="https://icons8.com/icons/set/transaction-list">Transaction List</Hyperlink> icon by <Hyperlink NavigateUri="https://icons8.com">Icon 8</Hyperlink></TextBlock>
+    </Grid>
+
+
+</ContentDialog>
