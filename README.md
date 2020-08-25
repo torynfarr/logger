@@ -21,7 +21,7 @@ A UWP server application which receives messages and displays them in a customiz
 ## Use-case
 The primary use-case for this suite of applications is to log whatever events you would like as they occur while you're playtesting a game or application created in Unity. It provides more detail and flexibility than the *Debug.Log()* method included in the Unity engine and gives you the ability to easily export the log.
 
-It's of particular value if you're working on an AR or VR application and you're testing with your code running *on device.* In that scenario, you don't have access to the console in Unity. If your working on a HoloLens 2 app, because the server application is a UWP app, it can follow you into the experience and allow you to see the messages being logged!
+It's of particular value if you're working on an AR or VR application and you're testing with your code running *on device.* In that scenario, you don't have access to the console in Unity. If you're working on a HoloLens 2 app, because the server application is a UWP app, it can follow you into the experience and allow you to see the messages being logged!
 
 Another potential use-case would be if you have someone remote testing your game or application. The client app in Unity could be configured to point to your WAN IP. Then, if you setup a port forwarding rule in your router, the server application could receive messages over the Internet.
 <br />
@@ -29,8 +29,6 @@ Another potential use-case would be if you have someone remote testing your game
 Here is an example of all three applications in use:
 
 <img src="https://github.com/torynfarr/logger/blob/master/docs/images/client-middleware-server.gif" width="800">
-<br />
-<br />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. This entire suite is just a tool to assist developers (including myself) working on AR/VR projects. As such, it's not my primary focus. If new features aren't being added, please feel free to fork.

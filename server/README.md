@@ -51,6 +51,7 @@ This setup message provides the server with the names of up to fifteen columns i
 - Each column name must be unique.
 
 - Avoid using special characters other than spaces and hyphens.
+<br />
 
 Please see the [client](https://github.com/torynfarr/logger/tree/master/client) section of this repository for further details.
 <br />
@@ -75,7 +76,6 @@ Messages sent by the client application should use the following structure:
   "T-Piece at Risk": "No"
 }
 ```
-<br />
 
 - Each key in the JSON data should match the name of the corresponding column exactly (case sensitive).
 
@@ -129,6 +129,7 @@ Some ideas for potential future enhancements include:
 - A dialog prompt to confirm/export data before restarting.
 - Loop back exemption to negate the need for the middleware app when receiving messages locally.
 - Support for SSL encryption (receiving requests via https)
+<br />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. This entire suite is just a tool to assist developers (including myself) working on AR/VR projects. As such, it's not my primary focus. If new features aren't being added, please feel free to fork.

@@ -76,6 +76,7 @@ This setup message provides the server with the names of up to fifteen columns i
 - Each column name must be unique.
 
 - Avoid using special characters other than spaces and hyphens.
+<br />
 
 ### Sending a Regular Message
 Whenever an event occurs in your Unity project which you would like to log, you can use the client script to send a message to the server application.
@@ -154,15 +155,11 @@ if (logger.enabled)
     });
 }
 ```
-<br />
-<br />
 
 ## Roadmap
 - Testing for network connectivity and disabling the GameObject the script is attached to if no connectivity is detected.
 - Support for SSL encryption (sending messages via https).
 - If Unity adds support for dynamic types, the *PostAsync* method could be modified making to make it more elegant to call.
-<br />
-<br />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. This entire suite is just a tool to assist developers (including myself) working on AR/VR projects. As such, it's not my primary focus. If new features aren't being added, please feel free to fork.
