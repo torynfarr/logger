@@ -1,4 +1,4 @@
-# Server
+<img src="https://github.com/torynfarr/logger/blob/master/docs/images/icon.png" width="88"># Server
 This application runs on Windows 10 and receives http POST requests either directly from the client running in a Unity project or via the optional middleware layer. When messages are received, they are displayed in a WinUI3 datagrid.
 
 The primary use-case for this application is to log whatever events you would like as they occur while you're playtesting a game or application created in Unity with more detail and flexibility than the *Debug.Log()* method included in the Unity engine and with the ability to easily export the log.
@@ -147,3 +147,4 @@ This project (including the client, middleware, and server) are [licensed](https
 - The minimum supported version of Windows 10 is version 1903 (Build 18362).
 - The application requires network connectivity. At least one local area network adapter in your computer must have a valid IPv4 address.
 - The middleware application is required if the server application is running on the same computer as the client which is sending it messages.
+- [Transaction List](https://icons8.com/icons/set/transaction-list) icon by [Icon 8](https://icons8.com)

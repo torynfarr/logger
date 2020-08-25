@@ -1,4 +1,4 @@
-# Logger
+<img src="https://github.com/torynfarr/logger/blob/master/docs/images/icon.png" width="88"># Logger
 Logger is a suite of three applications:
 <br />
 <br />
@@ -39,3 +39,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/master/LICENSE) under the GNU General Public License v3.0.
 <br />
 <br />
+
+## Additional Information
+
+- [Transaction List](https://icons8.com/icons/set/transaction-list) icon by [Icon 8](https://icons8.com)
