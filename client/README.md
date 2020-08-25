@@ -7,12 +7,11 @@ There are two types of messages the client script is designed to send. The first
 
 Please see the [server](https://github.com/torynfarr/logger/tree/master/server) section of this repository for further details.
 
-The client is not intended to be built/compiled. Instead, the *Client.cs* file is meant to be added to a GameObject in a scene hierarchy in Unity.
+The client is not intended to be built/compiled. Instead, the *Client.cs* file is meant to be added to a GameObject in a scene in Unity.
 <br />
 <br />
 
 ## Usage
-<br />
 
 ### Installation and Configuration
 1) Add both the *Client.cs* and *Rest.cs* files to your Unity project.
@@ -21,15 +20,13 @@ The client is not intended to be built/compiled. Instead, the *Client.cs* file i
 
 3) Attach *Client.cs* to a new empty GameObject or to an existing GameObject.
 
-4) In the properties of the GameObject you attached the *Client.cs* script to, enter the IP address of the PC on which the server application or the Logger Middleware app is running.
+4) In the properties of the GameObject you attached the *Client.cs* script to, enter the IP address of the PC on which the server application or the middleware app is running.
 
 5) Enter the TCP port number which the server or middleware app is listening on. By default, the server application is configured to listen on TCP port 4444.
 
 6) If using a new GameObject, add a tag titled *Logger* to the GameObject.
 
 <img src="https://github.com/torynfarr/logger/blob/master/docs/images/client-gameobject-configuration.png" width="800">
-<br />
-<br />
 
 ### Sending a Setup Message
 
@@ -40,7 +37,7 @@ using logger_client;
 using Newtonsoft.Json.Linq;
 ```
 
-Add a private or public property to the class in your script with the *Client* reference type. Ideally, name the property the same name as the GameObject to which the *Client.cs* script is attached.
+Add a private or public property to the class in your script with the *Client* reference type. Ideally, give the property the same name as the GameObject to which the *Client.cs* script is attached.
 
 ```c#
 private Client logger;
@@ -79,15 +76,13 @@ This setup message provides the server with the names of up to fifteen columns i
 - Each column name must be unique.
 
 - Avoid using special characters other than spaces and hyphens.
-<br />
-<br />
 
 ### Sending a Regular Message
-Whenever an event occurs in your Unity project which you would like to log, you can use the client script to to send a message to the server application.
+Whenever an event occurs in your Unity project which you would like to log, you can use the client script to send a message to the server application.
 <br />
 
-#### Method 1: Using a jObject
-Similar to how the setup message was sent, you can create a jObject to send as a message to the server application. In the jObject, you'll add a key/value pair for each column you've configured via the setup message.
+#### Method 1: Using a JObject
+Similar to how the setup message was sent, you can create a JObject to send as a message to the server application. In the JObject, you'll add a key/value pair for each column you've configured via the setup message.
 ```c#
 if (logger.enabled)
 {
@@ -109,17 +104,15 @@ if (logger.enabled)
 ```
 <br />
 
-- Each key in the JSON data should match the name of the corresponding column exactly (case sensative).
+- Each key in the JSON data should match the name of the corresponding column exactly (case sensitive).
 
 - The value in each key/value pair should be a string data type.
 
 - The order in which each key/value pair is listed in the JSON data is irrelevant.
 
-- You can ommit keys for any number of columns to which you don't want to add data in this message. 
+- You can omit keys for any number of columns to which you don't want to add data in this message. 
 
 - Again, do not include keys named *Time* or *ID* as the server application automatically populates those for you.
-<br />
-<br />
 
 #### Method 2: Using a Custom Class
 
@@ -142,7 +135,7 @@ public class Message
 }
 ```
 
-With your custom class created, you could instantiate an instance of it, serialize and parse it into a JObject, and then send it to the server application. This second approach is likely not as performant as the first approach, however it may make things easier if your custom class peforms some extended logic to set the property values. Also, you can set some property values to defaults (such as setting *MsgType* to *Message*) via the class constructor.
+With your custom class created, you could instantiate an instance of it, serialize and parse it into a JObject, and then send it to the server application. This second approach is likely not as performant as the first approach, however it may make things easier if your custom class performs some extended logic to set the property values. Also, you can set some property values to defaults (such as setting *MsgType* to *Message*) via the class constructor.
 ```c#
 if (logger.enabled)
 {
@@ -184,6 +177,6 @@ This project (including the client, middleware, and server) are [licensed](https
 ## Additional Information
 
 - The application is intended to be used as scripts in a Unity project.
-- There is a dependancy on the *Newtonsoft.Json* package.
+- There is a dependency on the *Newtonsoft.Json* package.
 - The application requires network connectivity.
 - The middleware application is required if the client script is running on the same computer as the server application.

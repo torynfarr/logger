@@ -21,8 +21,6 @@ You can stop the application at any time by pressing *CTRL C*.
 ## Roadmap
 - If loop back exemption can be added to the server application, this middleware app will no longer be needed.
 - Support for SSL encryption (sending and receiving requests via https)
-<br />
-<br />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. This entire suite is just a tool to assist developers (including myself) working on AR/VR projects. As such, it's not my primary focus. If new features aren't being added, please feel free to fork.

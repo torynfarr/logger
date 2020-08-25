@@ -3,14 +3,13 @@ This application runs on Windows 10 and receives http POST requests either direc
 
 The primary use-case for this application is to log whatever events you would like as they occur while you're playtesting a game or application created in Unity with more detail and flexibility than the *Debug.Log()* method included in the Unity engine and with the ability to easily export the log.
 
-It's of particular value if you're working on an AR or VR application and you're testing with your code running *on device.* In that scenario, you don't have access to the console in Unity. If your working on a HoloLens 2 app, because this server application is a UWP app, it can follow you into the experience and allow you to see the messages being logged!
+It's of particular value if you're working on an AR or VR application and you're testing with your code running *on device.* In that scenario, you don't have access to the console in Unity. If you're working on a HoloLens 2 app, because this server application is a UWP app, it can follow you into the experience and allow you to see the messages being logged!
 
 Another potential use-case would be if you have someone remote testing your game or application. The client app in Unity could be configured to point to your WAN IP. Then, if you setup a port forwarding rule in your router, the server application could receive messages over the Internet.
 <br />
 <br />
 
 ## Usage
-<br />
 
 ### Waiting for Setup Message
 
@@ -52,8 +51,6 @@ This setup message provides the server with the names of up to fifteen columns i
 - Each column name must be unique.
 
 - Avoid using special characters other than spaces and hyphens.
-<br />
-<br />
 
 Please see the [client](https://github.com/torynfarr/logger/tree/master/client) section of this repository for further details.
 <br />
@@ -80,17 +77,15 @@ Messages sent by the client application should use the following structure:
 ```
 <br />
 
-- Each key in the JSON data should match the name of the corresponding column exactly (case sensative).
+- Each key in the JSON data should match the name of the corresponding column exactly (case sensitive).
 
 - The value in each key/value pair should be a string data type.
 
 - The order in which each key/value pair is listed in the JSON data is irrelevant.
 
-- You can ommit keys for any number of columns to which you don't want to add data in this message. 
+- You can omit keys for any number of columns to which you don't want to add data in this message. 
 
 - Again, do not include keys named *Time* or *ID* as the server application automatically populates those for you.
-<br />
-<br />
 
 Please see the [client](https://github.com/torynfarr/logger/tree/master/client) section of this repository for further details.
 <br />
@@ -104,11 +99,11 @@ The menu along the left side of the server application provides several useful f
 <img src="https://github.com/torynfarr/logger/blob/master/docs/images/server-menu-buttons.png" width="800">
 
 #### Clear
-The clear button let's you clear the datagrid of all rows. **Use Caution!** Once you clear the datagrid, those messages are gone for good.
+The clear button lets you clear the datagrid of all rows. **Use Caution!** Once you clear the datagrid, those messages are gone for good.
 <br />
 
 #### Export
-The export button let's you save the contents of the datagrid as a tab delimited text file. Columns are exported in the order in which they appear in the datagrid.
+The export button lets you save the contents of the datagrid as a tab delimited text file. Columns are exported in the order in which they appear in the datagrid.
 <br />
 
 #### Restart
@@ -116,7 +111,7 @@ The restart button stops and restarts the http listener used by the server appli
 <br />
 
 #### About
-The about button displays info about the app, including a link to this Github repository.
+The about button displays info about the app, including a link to this GitHub repository.
 <br />
 <br />
 
@@ -134,8 +129,6 @@ Some ideas for potential future enhancements include:
 - A dialog prompt to confirm/export data before restarting.
 - Loop back exemption to negate the need for the middleware app when receiving messages locally.
 - Support for SSL encryption (receiving requests via https)
-<br />
-<br />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. This entire suite is just a tool to assist developers (including myself) working on AR/VR projects. As such, it's not my primary focus. If new features aren't being added, please feel free to fork.
