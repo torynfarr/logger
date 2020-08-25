@@ -1,4 +1,6 @@
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/icon.png" width="88"># Server
+<img src="https://github.com/torynfarr/logger/blob/master/docs/images/app-icon.png" width="88">
+
+# Server
 This application runs on Windows 10 and receives http POST requests either directly from the client running in a Unity project or via the optional middleware layer. When messages are received, they are displayed in a WinUI3 datagrid.
 
 The primary use-case for this application is to log whatever events you would like as they occur while you're playtesting a game or application created in Unity with more detail and flexibility than the *Debug.Log()* method included in the Unity engine and with the ability to easily export the log.

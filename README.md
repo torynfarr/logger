@@ -1,4 +1,6 @@
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/icon.png" width="88"># Logger
+<img src="https://github.com/torynfarr/logger/blob/master/docs/images/app-icon.png" width="88">
+
+# Logger
 Logger is a suite of three applications:
 <br />
 <br />
