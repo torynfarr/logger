@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace logger_middleware
+namespace Aporia.Logger.Middleware
 {
     public class Rest
     {

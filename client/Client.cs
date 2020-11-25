@@ -5,7 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace logger_client
+namespace Aporia.Logger.Client
 {
     public class Client : MonoBehaviour
     {

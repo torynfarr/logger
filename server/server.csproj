@@ -7,7 +7,7 @@
     <ProjectGuid>{DC587360-D8A9-4072-A2C0-CCF57A1D485B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>logger_server</RootNamespace>
+    <RootNamespace>Aporia.Logger.Server</RootNamespace>
     <AssemblyName>server</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>

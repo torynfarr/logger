@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace logger_server
+namespace Aporia.Logger.Server
 {
     public sealed partial class ContentDialogAbout : ContentDialog
     {

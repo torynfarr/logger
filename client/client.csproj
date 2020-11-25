@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>logger_middleware</RootNamespace>
+    <RootNamespace>Aporia.Logger.Client</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

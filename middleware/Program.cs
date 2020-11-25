@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace logger_middleware
+namespace Aporia.Logger.Middleware
 {
     class Program
     {

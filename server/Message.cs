@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace logger_server
+namespace Aporia.Logger.Server
 {
     public class Message
     {

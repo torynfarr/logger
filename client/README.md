@@ -33,24 +33,35 @@ The client is not intended to be built/compiled. Instead, the *Client.cs* file i
 Choose a script in your Unity project which will send the server application a setup message. Ideally, you'll want this event to occur at the start of your application. In the script you've chosen, add the following using directives:
 
 ```c#
-using logger_client;
+using Aporia.Logger.Client;
 using Newtonsoft.Json.Linq;
 ```
 
-Add a private or public property to the class in your script with the *Client* reference type. Ideally, give the property the same name as the GameObject to which the *Client.cs* script is attached.
+Add a public property to the class in your script with the *GameObject* reference type. This will be the game-object in your hierarchy which you attach the *Client* script to.
 
 ```c#
-private Client logger;
+public GameObject Logger
 ```
-In the *Start* or *Awake* class methods, you'll need to set *logger* to the *Client* script component of the GameObject it's attached to. For example:
+
+Add a private property to the class in your script with the *Client* reference type.
 
 ```c#
-logger = GameObject.FindGameObjectWithTag("Logger").GetComponent<Client>();
+private Client client;
 ```
+
+In the *Start* or *Awake* class methods, you'll need to set *client* to the *Client* script component of the GameObject it's attached to. For example:
+
+```c#
+if (Logger.activeInHierarchy)
+{
+    client = GameObject.FindGameObjectWithTag("Logger").GetComponent<Client>();
+}
+```
+
 Where appropriate, use the following code to send the server app the setup message:
 
 ```c#
-if (logger.enabled)
+if (Logger.activeInHierarchy)
 {
     JObject jObject = new JObject
     {
@@ -61,7 +72,7 @@ if (logger.enabled)
 
     Task.Run(async () =>
     {
-        await logger.PostAsync(jObject);
+        await client.PostAsync(jObject);
     });
 }
 ```
@@ -84,8 +95,9 @@ Whenever an event occurs in your Unity project which you would like to log, you 
 
 #### Method 1: Using a JObject
 Similar to how the setup message was sent, you can create a JObject to send as a message to the server application. In the JObject, you'll add a key/value pair for each column you've configured via the setup message.
+
 ```c#
-if (logger.enabled)
+if (Logger.activeInHierarchy)
 {
     JObject jObject = new JObject
     {
@@ -99,7 +111,7 @@ if (logger.enabled)
 
     Task.Run(async () =>
     {
-        await logger.PostAsync(jObject);
+        await client.PostAsync(jObject);
     });
 }
 ```
@@ -137,8 +149,9 @@ public class Message
 ```
 
 With your custom class created, you could instantiate an instance of it, serialize and parse it into a JObject, and then send it to the server application. This second approach is likely not as performant as the first approach, however it may make things easier if your custom class performs some extended logic to set the property values. Also, you can set some property values to defaults (such as setting *MsgType* to *Message*) via the class constructor.
+
 ```c#
-if (logger.enabled)
+if (Logger.activeInHierarchy)
 {
     Message message = new Message
     {
@@ -151,7 +164,7 @@ if (logger.enabled)
 
     Task.Run(async () =>
     {
-        await logger.PostAsync(JObject.Parse(JsonConvert.SerializeObject(message)));
+        await client.PostAsync(JObject.Parse(JsonConvert.SerializeObject(message)));
     });
 }
 ```
