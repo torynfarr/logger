@@ -1,11 +1,11 @@
 # Client
 This application is intended for use in Unity projects. The client script sends http POST requests (specifically serialized JSON data) either directly to the server application or to the optional middleware layer.
 
-Please see the [middleware](https://github.com/torynfarr/logger/tree/master/middleware) section of this repository for further details.
+Please see the [middleware](https://github.com/torynfarr/logger/tree/main/middleware) section of this repository for further details.
 
 There are two types of messages the client script is designed to send. The first is a setup message which configures the datagrid in the server app with up to fifteen columns and sets the text color. The second is a regular message containing a row of data to be added to the datagrid.
 
-Please see the [server](https://github.com/torynfarr/logger/tree/master/server) section of this repository for further details.
+Please see the [server](https://github.com/torynfarr/logger/tree/main/server) section of this repository for further details.
 
 The client is not intended to be built/compiled. Instead, the *Client.cs* file is meant to be added to a GameObject in a scene in Unity.
 <br />
@@ -26,7 +26,7 @@ The client is not intended to be built/compiled. Instead, the *Client.cs* file i
 
 6) If using a new GameObject, add a tag titled *Logger* to the GameObject.
 
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/client-gameobject-configuration.png" width="800">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/client-gameobject-configuration.png" width="800">
 
 ### Sending a Setup Message
 
@@ -180,7 +180,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 <br />
 
 ## License
-This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/master/LICENSE) under the GNU General Public License v3.0.
+This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/main/LICENSE) under the GNU General Public License v3.0.
 <br />
 <br />
 
