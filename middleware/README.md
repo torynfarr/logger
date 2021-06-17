@@ -16,7 +16,7 @@ Example:
 ```
 You can stop the application at any time by pressing *CTRL C*.
 
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/middleware-relaying-messages.png" width="800">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/middleware-relaying-messages.png" width="800">
 
 ## Roadmap
 - If loop back exemption can be added to the server application, this middleware app will no longer be needed.
@@ -29,7 +29,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 <br />
 
 ## License
-This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/master/LICENSE) under the GNU General Public License v3.0.
+This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/main/LICENSE) under the GNU General Public License v3.0.
 <br />
 <br />
 
