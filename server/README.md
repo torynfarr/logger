@@ -1,4 +1,4 @@
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/app-icon.png" width="88">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/app-icon.png" width="88">
 
 # Server
 This application runs on Windows 10 and receives http POST requests either directly from the client running in a Unity project or via the optional middleware layer. When messages are received, they are displayed in a WinUI3 datagrid.
@@ -19,9 +19,9 @@ When launched, the application will list all of the local IPv4 addresses that it
 
 If the server application is running on the same computer as the client, the middleware application needs to be used. The middleware application serves as a workaround for the network isolation and loop back rules which prevent the Logger Server UWP app from receiving requests from the same machine it's running and listening on.
 
-Please see the [middleware](https://github.com/torynfarr/logger/tree/master/middleware) section of this repository for further details.
+Please see the [middleware](https://github.com/torynfarr/logger/tree/main/middleware) section of this repository for further details.
 
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/server-awaiting-setup-message.png" width="800">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/server-awaiting-setup-message.png" width="800">
 
 Before the app will start receiving messages and displaying them in the datagrid, it needs to be sent a setup message from the client. The setup message is JSON data which is serialized and transmitted as an http POST request to the server. 
 
@@ -55,7 +55,7 @@ This setup message provides the server with the names of up to fifteen columns i
 - Avoid using special characters other than spaces and hyphens.
 <br />
 
-Please see the [client](https://github.com/torynfarr/logger/tree/master/client) section of this repository for further details.
+Please see the [client](https://github.com/torynfarr/logger/tree/main/client) section of this repository for further details.
 <br />
 <br />
 
@@ -63,7 +63,7 @@ Please see the [client](https://github.com/torynfarr/logger/tree/master/client) 
 
 After receiving the setup message, the datagrid will become visible, configured with the columns you specified in the setup message. The server application is now ready to receive messages which will be added to the datagrid in the order in which they are received.
 
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/server-receiving-messages.png" width="800">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/server-receiving-messages.png" width="800">
 
 Messages sent by the client application should use the following structure:
 ```json
@@ -89,7 +89,7 @@ Messages sent by the client application should use the following structure:
 
 - Again, do not include keys named *Time* or *ID* as the server application automatically populates those for you.
 
-Please see the [client](https://github.com/torynfarr/logger/tree/master/client) section of this repository for further details.
+Please see the [client](https://github.com/torynfarr/logger/tree/main/client) section of this repository for further details.
 <br />
 <br />
 
@@ -98,7 +98,7 @@ The columns in the datagrid can be resized and you can click and drag on a colum
 
 The menu along the left side of the server application provides several useful features.
 
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/server-menu-buttons.png" width="800">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/server-menu-buttons.png" width="800">
 
 #### Clear
 The clear button lets you clear the datagrid of all rows. **Use Caution!** Once you clear the datagrid, those messages are gone for good.
@@ -139,7 +139,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 <br />
 
 ## License
-This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/master/LICENSE) under the GNU General Public License v3.0.
+This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/main/LICENSE) under the GNU General Public License v3.0.
 <br />
 <br />
 
