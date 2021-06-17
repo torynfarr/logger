@@ -1,21 +1,21 @@
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/app-icon.png" width="88">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/app-icon.png" width="88">
 
 # Logger
 Logger is a suite of three applications:
 <br />
 <br />
 
-### [Client](https://github.com/torynfarr/logger/tree/master/client)
+### [Client](https://github.com/torynfarr/logger/tree/main/client)
 A client script designed for use in a Unity project sends messages to either the middleware or server app. There are two types of messages the client script is designed to send. The first is a setup message which configures the datagrid in the server app with up to fifteen columns and sets the text color. The second is a regular message containing a row of data to be added to the datagrid.
 <br />
 <br />
 
-### [Middleware](https://github.com/torynfarr/logger/tree/master/middleware)
+### [Middleware](https://github.com/torynfarr/logger/tree/main/middleware)
 An optional middleware console application can be used to relay messages from the client to the server. This serves as a workaround for the network isolation and loop back rules in Windows 10 which prevent the Logger Server (a UWP application) from receiving requests from the same machine it's running and listening on.
 <br />
 <br />
 
-### [Server](https://github.com/torynfarr/logger/tree/master/server)
+### [Server](https://github.com/torynfarr/logger/tree/main/server)
 A UWP server application which receives messages and displays them in a customizable WinUI3 datagrid.
 <br />
 <br />
@@ -30,7 +30,7 @@ Another potential use-case would be if you have someone remote testing your game
 <br />
 Here is an example of all three applications in use:
 
-<img src="https://github.com/torynfarr/logger/blob/master/docs/images/client-middleware-server.gif" width="800">
+<img src="https://github.com/torynfarr/logger/blob/main/docs/images/client-middleware-server.gif" width="800">
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. This entire suite is just a tool to assist developers (including myself) working on AR/VR projects. As such, it's not my primary focus. If new features aren't being added, please feel free to fork.
@@ -38,7 +38,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 <br />
 
 ## License
-This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/master/LICENSE) under the GNU General Public License v3.0.
+This project (including the client, middleware, and server) are [licensed](https://github.com/torynfarr/logger/blob/main/LICENSE) under the GNU General Public License v3.0.
 <br />
 <br />
 
